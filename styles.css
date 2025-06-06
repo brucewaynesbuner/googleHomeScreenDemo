@@ -1,0 +1,157 @@
+ /*asteriks selects the elements on the webpage, everything was reset */
+ *{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ body {
+    background: #0f172a;
+    color: white;
+    padding: 14px;
+    min-height: 100vh;
+    display: flex;
+      flex-direction: column; /*flex-direction sets the direction of the elements in a column */
+      gap: 14px; /*gap sets the space between the elements */
+      font-family:sans-serif, 'Times New Roman', Times, serif;
+ }
+       
+ header{
+    display: flex;/*flex shows the elements in a row */
+    align-items: flex-end;/*aligns the items in the center */;
+    justify-content: right;/*space between the items */
+ }
+ nav,
+    section {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+.WhiteLink {
+      color: white;
+      font-size: 0.9em;
+}
+
+a {
+   text-decoration: unset; /*removes the underline from the links */
+   font-size: 0.8em;
+}
+
+a:hover {
+   text-decoration: underline; /*adds underline to the links on hover */;
+}
+
+main {
+   flex: 1; /*flex: 1 makes the main section take up the remaining space, pushes footer to the bottom */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 24px;
+}
+
+h1 {
+   font-size: 6em; 
+   font-family: 'Times New Roman', Times, serif;
+}
+
+.searchBar {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   max-width: 700px;
+   margin: 0 auto;
+   gap: 14px;
+   border: 1px solid grey;
+   padding: 14px;
+   border-radius: 24px;
+   transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Make the entire search bar turn grey when hovered */
+.searchBar:hover {
+   background: grey;
+   border-color: transparent;
+}
+
+/* Make the input take all available space */
+.searchBar input {
+   flex: 1;
+   background: transparent;
+   outline: none;
+   border: none;
+   color: white;
+   font-size: 16px;
+}
+
+.iconButton {
+   background:transparent;
+   border: none;
+   color: white;
+   font-size: 1.2em;
+}
+.iconButtonContainer {
+   display: flex;
+   align-items: center;
+   gap: 14px;
+}
+
+
+.searchButtonsContainer {
+   display: flex;
+   gap: 14px;
+}
+
+.searchButtonsContainer button:hover {
+  border: 1px solid white; /*adds a border to the button on hover */
+  cursor: pointer; /*changes the cursor to a pointer on hover */
+}
+
+.languageSelection{
+   font-size: 1em;
+}
+
+.languageSelection span {
+   color:cadetblue;
+}
+footer {
+   display: flex;
+   flex-direction: column;
+}
+
+footer>section {
+   padding: 14px;
+}
+
+footer>section:last-child {
+   border-top: 1px solid darkgrey;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.footerLink {
+   display: flex;
+   align-items: center;
+   gap: 14px;
+}
+
+.footerLink a {
+   cursor: pointer;
+}
+
+.profile-img {
+   max-width: 40px;
+   max-height:40px;
+   aspect-ratio: 1 / 1;
+   border-radius: 50%;
+   border: 2px solid cyan; /*adds a border to the profile image */
+}
+@media (min-width: 540px) {
+   
+   footer>section:last-child {
+      flex-direction: row; /*changes the direction of the footer to row on larger screens */
+      justify-content: space-between; /*spaces the items in the footer */
+   }
+}
